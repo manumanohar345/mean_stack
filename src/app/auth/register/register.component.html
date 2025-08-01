@@ -6,11 +6,14 @@
           <h6 class="text-center mb-4">Register</h6>
           <form *ngIf="!registered" (submit)="onRegister($event)">
             <div class="mb-4">
-              <input type="email" class="form-control form-control-sm" id="email" name="email" placeholder="Email" required [(ngModel)]="email" ngModel>
+              <input type="email" class="form-control form-control-sm" id="email" name="email" placeholder="Email" required [(ngModel)]="email">
             </div>
             <div class="mb-4">
-              <input type="password" class="form-control form-control-sm" id="password" name="password" placeholder="Password" required [(ngModel)]="password" ngModel>
+              <input type="password" class="form-control form-control-sm" id="password" name="password" placeholder="Password" required [(ngModel)]="password">
             </div>
+             <div class="mb-4">
+              <input type="password" class="form-control form-control-sm" id="confirmPassword" name="confirmPassword" placeholder="confirmPassword" required [(ngModel)]="confirmPassword">
+             </div>
             <button type="submit" class="btn btn-success btn-sm w-100">Register</button>
           </form>
           <div *ngIf="registered" class="alert alert-success text-center py-2 mb-2">
