@@ -11,27 +11,27 @@
         }
       },
       "root": "",
-      "sourceRoot": "src",
+      "sourceRoot": "frontend",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/hrms-portal",
-            "index": "src/index.html",
-            "main": "src/main.ts",
+            "index": "frontend/index.html",
+            "main": "frontend/main.ts",
             "polyfills": [
               "zone.js"
             ],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "frontend/favicon.ico",
+              "frontend/assets"
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/styles.scss"
+              "frontend/styles.scss"
             ],
             "scripts": []
           },
@@ -90,11 +90,11 @@
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "frontend/favicon.ico",
+              "frontend/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "frontend/styles.scss"
             ],
             "scripts": []
           }
