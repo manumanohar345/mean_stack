@@ -1,0 +1,40 @@
+<div class="todo-container card p-3 shadow-sm">
+    <h2 class="mb-3">HR Todo List</h2>
+    <!-- Add Task Form -->
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" [(ngModel)]="newTodo" placeholder="Task title" />
+        <input type="date" class="form-control" [(ngModel)]="newDueDate" />
+        <button class="btn btn-primary" (click)="addTodo()">Add</button>
+    </div>
+
+    <!-- Todo List -->
+    <ul class="list-group">
+        <li *ngFor="let todo of todos" class="list-group-item d-flex justify-content-between align-items-center">
+            <div class="flex-grow-1">
+                <input type="checkbox" [(ngModel)]="todo.completed" (change)="toggleTodo(todo.id)"
+                    class="form-check-input me-2" />
+
+                <!-- If editing this todo -->
+                <span *ngIf="editTodoId === todo.id">
+                    <input type="text" [(ngModel)]="editTitle" class="form-control d-inline w-50 me-2" />
+                    <input type="date" [(ngModel)]="editDueDate" class="form-control d-inline w-50 me-2" />
+                    <button class="btn btn-success btn-sm" (click)="saveEdit(todo.id)">Save</button>
+                    <button class="btn btn-secondary btn-sm" (click)="cancelEdit()">Cancel</button>
+                </span>
+
+                <!-- Normal view -->
+                <span *ngIf="editTodoId !== todo.id">
+                    <span [class.text-decoration-line-through]="todo.completed">{{ todo.title }}</span>
+                    <small class="text-muted d-block">Due: {{ todo.dueDate | date:'shortDate' }}</small>
+                </span>
+            </div>
+
+            <!-- Action buttons -->
+            <div *ngIf="editTodoId !== todo.id">
+                <button class="btn btn-warning btn-sm me-3" (click)="startEdit(todo)">Edit</button>
+                <button class="btn btn-danger btn-sm" (click)="deleteTodo(todo.id)">Delete</button>
+            </div>
+
+        </li>
+    </ul>
+</div>

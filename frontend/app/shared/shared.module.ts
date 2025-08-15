@@ -5,6 +5,8 @@ import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { HeaderComponent } from './header/header.component';
 import { RouterModule } from '@angular/router';
+import { TodoComponent } from '../todo/todo.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -13,17 +15,20 @@ import { RouterModule } from '@angular/router';
     NavbarComponent,
     FooterComponent,
     SidebarComponent,
-    HeaderComponent
+    HeaderComponent,
+    TodoComponent
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ],
   exports: [
     NavbarComponent,
     SidebarComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    TodoComponent
   ]
 })
 export class SharedModule { }
