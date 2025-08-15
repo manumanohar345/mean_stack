@@ -1,0 +1,23 @@
+<div class="game">
+  <h2>Tic Tac Toe</h2>
+
+  <!-- Game Status -->
+  <p *ngIf="!winner">Current turn: <strong>{{ currentPlayer }}</strong></p>
+  <p *ngIf="winner === 'Draw'">It's a <strong>draw</strong>!</p>
+  <p *ngIf="winner && winner !== 'Draw'">🎉 Winner: <strong>{{ winner }}</strong></p>
+
+  <!-- 3x3 Grid -->
+  <div class="board">
+    <div class="row" *ngFor="let r of [0,1,2]">
+      <button
+        *ngFor="let c of [0,1,2]"
+        class="cell"
+        (click)="playSquare(getCellIndex(r, c))">
+        {{ board[getCellIndex(r, c)] || '' }}
+      </button>
+    </div>
+  </div>
+
+  <!-- Reset button -->
+  <button class="reset" (click)="resetGame()">Reset</button>
+</div>

@@ -1,0 +1,31 @@
+.game {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.board {
+  display: grid;
+  gap: 8px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  gap: 8px;
+}
+
+.cell {
+  height: 80px;
+  font-size: 32px;
+  font-weight: bold;
+  cursor: pointer;
+  background: white;
+  border: 2px solid #333;
+  border-radius: 8px;
+}
+
+.reset {
+  margin-top: 12px;
+  padding: 8px 16px;
+  cursor: pointer;
+}

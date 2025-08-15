@@ -32,7 +32,8 @@ const routes: Routes = [
         loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule)
       }
     ]
-  }
+  },
+  { path: 'fun-zone', loadChildren: () => import('./fun-zone/fun-zone.module').then(m => m.FunZoneModule) },
 ];
 
 
