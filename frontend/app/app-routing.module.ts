@@ -34,6 +34,7 @@ const routes: Routes = [
     ]
   },
   { path: 'fun-zone', loadChildren: () => import('./fun-zone/fun-zone.module').then(m => m.FunZoneModule) },
+  { path: 'inventory', loadChildren: () => import('./inventory/inventory.module').then(m => m.InventoryModule) },
 ];
 
 

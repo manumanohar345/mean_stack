@@ -1,12 +1,23 @@
-<h2>HR Fun Zone & Todo</h2>
+<h2 class="mb-4 text-center">HR Dashboard: Fun Zone, Todo & Inventory</h2>
 <div class="container">
-  <div class="card">
-    <h3>Fun Zone</h3>
-    <app-tick-tac-toe></app-tick-tac-toe>
-  </div>
-
-  <div class="card">
-    <h3>Todo</h3>
-    <app-todo></app-todo>
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <div class="card p-3">
+        <h3>Fun Zone</h3>
+        <app-tick-tac-toe></app-tick-tac-toe>
+      </div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <div class="card p-3">
+        <h3>Todo</h3>
+        <app-todo></app-todo>
+      </div>
+    </div>
+    <div class="col-md-12 mb-3">
+      <div class="card p-3">
+        <h3>Inventory</h3>
+        <app-inventory></app-inventory>
+      </div>
+    </div>
   </div>
 </div>
